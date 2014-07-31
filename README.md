@@ -35,4 +35,4 @@ Based on ["Structure of a Haskell project"](http://www.haskell.org/haskellwiki/S
                                what in this project, and their contact info
       LICENSE               -- Textfile describing licensing terms for this project
       app.cabal             -- Project-description-file for cabal
-      Setup.hs       -- Program for running cabal commands
+      Setup.hs              -- Program for running cabal commands
