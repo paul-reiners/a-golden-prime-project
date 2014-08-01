@@ -7,6 +7,7 @@ import TUOLP
 import Text.Printf
 import Control.Exception
 import System.CPUTime
+import System.Environment
 
 getPrimePairs :: Integer -> [(Integer, Integer)]
 getPrimePairs n = [(p, q) | p <- takeWhile (< n) primes, q <- takeWhile (< n) primes, p <= q, p + q == n]
@@ -22,7 +23,8 @@ time a = do
     return v
  
 main = do
+    args <- getArgs
     putStrLn "Starting..."
-    time $ getPrimePairs 256 `seq` return ()
+    time $ getPrimePairs (read $ head args :: Integer) `seq` return ()
     putStrLn "Done."
 	
