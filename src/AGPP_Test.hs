@@ -11,5 +11,8 @@ testPrimePairs100 = TestCase $ assertEqual
 
 testPrimePairCount26 = TestCase $ assertEqual
 	"primePairCount failed for n = 26" 3 ( primePairCount 26 )
+
+testPrimePairCount100 = TestCase $ assertEqual
+	"primePairCount failed for n = 100" 6 ( primePairCount 100 )
 	
-main = runTestTT $ TestList [testPrimePairs26, testPrimePairs100, testPrimePairCount26]
+main = runTestTT $ TestList [testPrimePairs26, testPrimePairs100, testPrimePairCount26, testPrimePairCount100]
