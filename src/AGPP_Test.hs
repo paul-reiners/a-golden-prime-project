@@ -1,3 +1,6 @@
+-- Author: Paul Reiners
+-- https://github.com/paul-reiners/a-golden-prime-project
+
 module AGPP_Test where
 
 import AGPP( primePairs, primePairCount )
