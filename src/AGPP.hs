@@ -3,7 +3,7 @@
 
 module AGPP where 
 
-import TUOLP
+import TUOLP (primes)
 
 primePairs' :: Integer -> [(Integer, Integer)]
 primePairs' n = [(p, q) | p <- takeWhile (< n) primes, q <- takeWhile (< n) primes, p <= q, p + q == n]
@@ -18,3 +18,6 @@ primePairsHelper n ps
     
 primePairs :: Integer -> [(Integer, Integer)]
 primePairs n = primePairsHelper n (takeWhile (< n) primes)
+
+primePairCount :: Integer -> Int
+primePairCount n = length (primePairs n)
