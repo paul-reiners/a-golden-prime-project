@@ -18,6 +18,9 @@ primePairCounts n = map primePairCount (nums n)
 numsAndPrimePairCounts :: Integer -> [(Integer, Int)]
 numsAndPrimePairCounts n = zip (nums n) (primePairCounts n)
 
+showTup :: (Show a, Show b) => (a,b) -> String
+showTup (a,b) = (show a) ++ "," ++ (show b)
+
 main = do
     args <- getArgs
-    mapM_ print (numsAndPrimePairCounts (read $ head args :: Integer))
+    mapM_ (putStrLn . showTup) (numsAndPrimePairCounts (read $ head args :: Integer))
