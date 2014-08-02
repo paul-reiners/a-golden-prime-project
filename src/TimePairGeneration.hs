@@ -22,6 +22,6 @@ time a = do
 main = do
     args <- getArgs
     putStrLn "Starting..."
-    time $ getPrimePairs (read $ head args :: Integer) `seq` return ()
+    time $ primePairs (read $ head args :: Integer) `seq` return ()
     putStrLn "Done."
 	
