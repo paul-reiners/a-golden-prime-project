@@ -1,6 +1,6 @@
 module AGPP_Test where
 
-import AGPP( primePairs )
+import AGPP( primePairs, primePairCount )
 import Test.HUnit
 
 testPrimePairs26 = TestCase $ assertEqual
@@ -8,5 +8,8 @@ testPrimePairs26 = TestCase $ assertEqual
 
 testPrimePairs100 = TestCase $ assertEqual
 	"primePairs failed for n = 100" [(3,97),(11,89),(17,83),(29,71),(41,59),(47,53)] ( primePairs 100 )
+
+testPrimePairCount26 = TestCase $ assertEqual
+	"primePairCount failed for n = 26" 3 ( primePairCount 26 )
 	
-main = runTestTT $ TestList [testPrimePairs26, testPrimePairs100]
+main = runTestTT $ TestList [testPrimePairs26, testPrimePairs100, testPrimePairCount26]
