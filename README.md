@@ -23,5 +23,7 @@ I first find all pairs of primes that sum to *n* for a given even number *n > 2*
 
 My first implementation does the obvious thing:
 
+    primePairs' :: Integer -> [(Integer, Integer)]
+    primePairs' n = [(p, q) | p <- takeWhile (< n) primes, q <- takeWhile (< n) primes, p <= q, p + q == n]
 
 AGPP.getPrimePairs returns all prime pairs that sum to n for input argument n.  For n up to about 57,000, it returns all prime pairs in less than 30 seconds.
