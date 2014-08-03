@@ -28,19 +28,21 @@ My first implementation does the obvious thing:
     
 This clearly runs in quadratic time if you ignore the calls to *primes*.  Here is the performance data:
 
-    n	     primePairs' computation time (sec)
-        256	    0.008
-        512	    0.024
-      1,024	    0.069
-      2,048	    0.226
-      4,096	    0.058
-      8,192	    0.262
-     16,384	    1.123
-     32,768	    5.335
-     65.536	   44.821
-    131,072	  245.860
-    262,144	 1211.950
-    524,288	 4887.736
+          n	     primePairs' computation time (sec)
+        256                             	  0.008
+        512	                                  0.024
+      1,024	                                  0.069
+      2,048	                                  0.226
+      4,096	                                  0.058
+      8,192	                                  0.262
+     16,384	                                  1.123
+     32,768	                                  5.335
+     65.536	                                 44.821
+    131,072	                                245.860
+    262,144	                               1211.950
+    524,288	                               4887.736
+
+(Note that my [performance measuring code](https://github.com/paul-reiners/a-golden-prime-project/blob/master/src/TimePairGeneration.hs) isn't the most scientific in the world, which is why the computation time for 2048 is less than the computation time for 4096.  But, whatever.) 
 
 There is an obvious linear time implementation:
 
