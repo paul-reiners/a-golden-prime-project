@@ -27,27 +27,3 @@ sieve (n : xs) = n : sieve (mark xs 1 n)
 
 primes :: [Integer]
 primes = sieve [2..]
-
-oddsFrom3 :: [Integer]
-oddsFrom3 = 3 : map (+2) oddsFrom3 
-
-mersenne = [ (p,2^p - 1) | p <- primes, prime (2^p - 1) ]
-
-notmersenne = [ (p,2^p - 1) | p <- primes, not (prime (2^p-1)) ]
-
-pdivisors :: Integer -> [Integer]
-pdivisors n = [ d | d <- [1..(n-1)], rem n d == 0 ]
-
-primePairs :: [(Integer,Integer)] 
-primePairs = pairs primes 
-  where 
-  pairs (x:y:xys) | x + 2 == y = (x,y): pairs (y:xys)
-                  | otherwise  = pairs (y:xys)
-
-primeTriples :: [(Integer,Integer,Integer)]
-primeTriples = triples primes 
-  where 
-  triples (x:y:z:xyzs) 
-   | x + 2 == y && y + 2 == z = (x,y,z) : triples (y:z:xyzs)
-   | otherwise                = triples (y:z:xyzs)
-
