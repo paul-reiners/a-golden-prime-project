@@ -82,6 +82,8 @@ For small *n*, the speed-up is dramatic.  But it's not small *n* that I'm worrie
     
 So what is going on here?  primePairs should be a lot faster than primePairs'.  My best guess is that for large *n*, the Sieve of Erastothenes table is taking up a lot of memory, and, hence, there is a possibly a lot of memory swapping out to disk.  This is causing the time of the calls to primes to dominate the computation time.  That's my guess at any rate.  It would be interesting to compare these relative times on computers with different amounts of RAM or to monitor at which values of *n* virtual memory starts being used.
 
+At any rate, depending on your definition of reasonable, **the highest even number we can *reasonably* enter into our primePairs function is somewhere between 2^15 (32,768) and 2^20 (1,048,576**).  This means we certainly can't reproduce Silva's results, but, as I said earlier, that's not the point of this exercise.
+
 Number of pairs of primes that sum to a particular even number
 --------------------------------------------------------------
 
