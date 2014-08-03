@@ -27,7 +27,7 @@ My first implementation does the obvious thing:
     primePairs' :: Integer -> [(Integer, Integer)]
     primePairs' n = [(p, q) | p <- takeWhile (< n) primes, q <- takeWhile (< n) primes, p <= q, p + q == n]
     
-This clearly runs in quadratic time if you ignore the calls to *primes*.  Here is the performance data:
+This clearly runs in quadratic time if you ignore the calls to `primes`.  Here is the performance data:
 
           n	     primePairs' computation time (sec)
         256                             	  0.008
@@ -82,9 +82,9 @@ For small *n*, the speed-up is dramatic.  But it's not small *n* that I'm worrie
     primePairs': O(n^2) * O(n log log n) = O(n^3 log log n)
     primePairs:  O(n) * O(n log log n)   = O(n^2 log log n)
     
-So what is going on here?  primePairs should be a lot faster than primePairs'.  My best guess is that for large *n*, the Sieve of Erastothenes table is taking up a lot of memory, and, hence, there is a possibly a lot of memory swapping out to disk.  This is causing the time of the calls to primes to dominate the computation time.  That's my guess at any rate.  It would be interesting to compare these relative times on computers with different amounts of RAM or to monitor at which values of *n* virtual memory starts being used.
+So what is going on here?  `primePairs` should be a lot faster than `primePairs'`.  My best guess is that for large *n*, the Sieve of Erastothenes table is taking up a lot of memory, and, hence, there is a possibly a lot of memory swapping out to disk.  This is causing the time of the calls to `primes` to dominate the computation time.  That's my guess at any rate.  It would be interesting to compare these relative times on computers with different amounts of RAM or to monitor at which values of *n* virtual memory starts being used.
 
-At any rate, depending on your definition of reasonable, **the highest even number we can *reasonably* enter into our primePairs function is somewhere between 2^15 (32,768) and 2^20 (1,048,576**).  This means we certainly can't reproduce Silva's results, but, as I said earlier, that's not the point of this exercise.
+At any rate, depending on your definition of reasonable, **the highest even number we can *reasonably* enter into our `primePairs` function is somewhere between 2^15 (32,768) and 2^20 (1,048,576**).  This means we certainly can't reproduce Silva's results, but that's not the point of this exercise.
 
 Number of pairs of primes that sum to a particular even number
 --------------------------------------------------------------
