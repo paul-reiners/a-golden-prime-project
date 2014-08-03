@@ -89,6 +89,11 @@ We next examine the number of pairs of primes that sum to a particular even numb
 
 We plot the results.  We'll look at these plots at various levels of resolution.  First we'll look at *n* up to 1000.
 
-![Prime pair count up to 1000](https://raw.githubusercontent.com/paul-reiners/a-golden-prime-project/master/plots/PrimePairCounts1000.png "Prime pair count up to 1000")
+![Prime pair count up to *n = 1000*](https://raw.githubusercontent.com/paul-reiners/a-golden-prime-project/master/plots/PrimePairCounts1000.png "Prime pair count up to *n = 1000*")
 
-Note that we've added a [LOESS smoothing line](http://en.wikipedia.org/wiki/Local_regression) in blue.  Of course, if this plot were ever to touch the x-axis, then Goldbach's conjecture would not be true.  Of course we also know that this is not going to happen for *n* up to 4 × 10^18 because of other
+Note that we've added a [LOESS smoothing line](http://en.wikipedia.org/wiki/Local_regression) in blue.  Of course, if this plot were ever to touch the x-axis, then Goldbach's conjecture would not be true.  Of course we also know that this is not going to happen for *n* up to 4 × 10^18 because of Silva's work.
+
+Now there is something interesting in this data that becomes more obvious if we zoom out to *n = 10,000*:
+
+![Prime pair count up to *n = 10,000*](https://raw.githubusercontent.com/paul-reiners/a-golden-prime-project/master/plots/PrimePairCounts10000.png "Prime pair count up to *n = 10,000*")
+
