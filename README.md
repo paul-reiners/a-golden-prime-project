@@ -98,3 +98,5 @@ Now there is something interesting in this data that becomes more obvious if we 
 ![Prime pair count up to *n = 10,000*](https://raw.githubusercontent.com/paul-reiners/a-golden-prime-project/master/plots/PrimePairCounts10000.png "Prime pair count up to *n = 10,000*")
 
 Note the curve gathered near the LOESS curve, but notice that there is a second gathering of points above this and perhaps a third gathering of points above that!  What the heck is that?!  We can also see that second curve in our first plot.
+
+**From our plots, it certainly seems reasonable to believe the Goldbach conjecture.**  It's hard to imagine that curve suddenly dropping all the way to the x-axis.  Of course, this doesn't **prove** anything.
