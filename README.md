@@ -7,6 +7,8 @@ Goldbach's Conjecture
 
 This project contains computational experiments regarding Goldbach's conjecture.  We're certainly not going to try to prove or disprove Goldbach's conjecture.  But we will try to learn a bit of Haskell and see what interesting patterns we can find for as large of values of *n* as our computational power will allow.
 
+This project is my implementation of "A Golden Prime Project" from [*Keeping it R.E.A.L.: Research Experiences for All Learners* by Carla D. Martin and Anthony Tongen](http://www.maa.org/publications/ebooks/keeping-it-real-research-experiences-for-all-learners).
+
 Prime Generation
 ----------------
 Rather than write the prime generation code in Haskell myself, I decided to concentrate on code related specifically to Goldbach's conjecture in this project.  Hence I've used Kees Doets' and Jan van Eijck's Sieve of Erastothenes Haskell implementation from [*The Haskell Road to Logic, Maths and Programming*](http://homepages.cwi.nl/~jve/HR/#Home).  This code is in [TUOLP.hs](https://github.com/paul-reiners/a-golden-prime-project/blob/master/src/TUOLP.hs).
