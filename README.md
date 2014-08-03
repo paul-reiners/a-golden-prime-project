@@ -14,7 +14,7 @@ Rather than write the prime generation code in Haskell myself, I decided to conc
 
 I've written my own prime generation code in C in my [a-prime-project](https://github.com/paul-reiners/a-prime-project/blob/master/prime.c).
 
-It should be noted that the ["time complexity of calculating all primes below n in the random access machine model is O(n \log\log n) operations"](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Algorithm_complexity).
+It should be noted that the ["time complexity of calculating all primes below *n* in the random access machine model is *O(n log log n)* operations"](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Algorithm_complexity).
 
 
 Finding Pairs of Primes
