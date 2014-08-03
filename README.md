@@ -42,4 +42,15 @@ This clearly runs in *O(n ^ 2)* ignoring the calls to *primes*.  Here is the per
     262,144	 1211.950
     524,288	 4887.736
 
-AGPP.getPrimePairs returns all prime pairs that sum to n for input argument n.  For n up to about 57,000, it returns all prime pairs in less than 30 seconds.
+There is an obvious linear time implementation:
+
+    primePairsHelper :: Integer -> [Integer] -> [(Integer, Integer)]
+    primePairsHelper n ps 
+        | length ps == 0                           = []
+        | length ps == 1 && head ps + head ps == n = [(head ps, head ps)]
+        | head ps + last ps < n                    = primePairsHelper n (tail ps)
+        | head ps + last ps > n                    = primePairsHelper n (init ps)
+        | otherwise                                = (head ps, last ps) : primePairsHelper n (tail (init ps))
+        
+    primePairs :: Integer -> [(Integer, Integer)]
+    primePairs n = primePairsHelper n (takeWhile (< n) primes)
