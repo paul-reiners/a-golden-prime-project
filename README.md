@@ -26,9 +26,9 @@ My first implementation does the obvious thing:
     primePairs' :: Integer -> [(Integer, Integer)]
     primePairs' n = [(p, q) | p <- takeWhile (< n) primes, q <- takeWhile (< n) primes, p <= q, p + q == n]
     
-This clearly runs in *O(n ^ 2)* ignoring the calls to *primes*.  Here is the performance data:
+This clearly runs in quadratic time if you ignore the calls to *primes*.  Here is the performance data:
 
-    n	     naïve algorithm computation time (sec)
+    n	     primePairs' computation time (sec)
         256	    0.008
         512	    0.024
       1,024	    0.069
@@ -54,3 +54,20 @@ There is an obvious linear time implementation:
         
     primePairs :: Integer -> [(Integer, Integer)]
     primePairs n = primePairsHelper n (takeWhile (< n) primes)
+
+However, the speed-up is disappointing:
+
+    n	       primePairs' computation time (sec)	 primePairs computation time (sec)
+          256	    0.008	                              0.001
+          512	    0.024	                              0.001
+        1,024	    0.069	                              0.004
+        2,048	    0.226	                              0.018
+        4,096	    0.058	                              0.080
+        8,192	    0.262	                              0.247
+       16,384	    1.123	                              1.161
+       32,768	    5.335	                              5.175
+       65,536	   44.821	                             43.395
+      131,072	  245.860	                            242.805
+      262,144	1,211.950	                          1,168.571
+      524,288	4,887.736	                          4,806.134
+    1,048,576		                                 22,614.785
