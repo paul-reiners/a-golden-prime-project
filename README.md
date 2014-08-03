@@ -3,10 +3,9 @@ A Golden Prime Project
 
 Goldbach's Conjecture
 ---------------------
-[Goldbach's conjecture](http://en.wikipedia.org/wiki/Goldbach's_conjecture) states that every even integer *n* greater than 2 is the sum of two primes.  It has not been proved, but has been confirmed by computer for *n* up to 4 × 10^18.
+[Goldbach's conjecture](http://en.wikipedia.org/wiki/Goldbach's_conjecture) states that every even integer *n* greater than 2 is the sum of two primes.  It has not been proved, but has been [confirmed by computer for *n* up to 4 × 10^18 by T. Oliveira e Silva](http://en.wikipedia.org/wiki/Goldbach%27s_conjecture#Verified_results).
 
-
-This project contains computational experiments regarding Goldbach's conjecture.
+This project contains computational experiments regarding Goldbach's conjecture.  We're certainly not going to try to replicate  Silva's results.  But we will try to learn a bit of Haskell and see what patterns we can find for as large of values of *n* as our computational power will allow.
 
 Prime Generation
 ----------------
@@ -88,6 +87,8 @@ Number of pairs of primes that sum to a particular even number
 
 We next examine the number of pairs of primes that sum to a particular even number.  Recall that, if Goldbach's conjecture is true, this will always be at least 1 (for *n > 2*).  The code for generating this can be found in [AGPP.hs](https://github.com/paul-reiners/a-golden-prime-project/blob/master/src/AGPP.hs) and [PrintPairCounts.hs](https://github.com/paul-reiners/a-golden-prime-project/blob/master/src/PrintPairCounts.hs).
 
-We plot the results.  We'll look at these plots at various levels of resolution.
+We plot the results.  We'll look at these plots at various levels of resolution.  First we'll look at *n* up to 1000.
 
 ![Prime pair count up to 1000](https://raw.githubusercontent.com/paul-reiners/a-golden-prime-project/master/plots/PrimePairCounts1000.png "Prime pair count up to 1000")
+
+Note that we've added a [LOESS smoothing line](http://en.wikipedia.org/wiki/Local_regression) in blue.  Of course, if this plot were ever to touch the x-axis, then Goldbach's conjecture would not be true.  Of course we also know that this is not going to happen for *n* up to 4 × 10^18 because of other
