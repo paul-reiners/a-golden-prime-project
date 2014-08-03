@@ -7,7 +7,7 @@ Goldbach's Conjecture
 
 This project contains computational experiments regarding Goldbach's conjecture.  We're certainly not going to try to prove or disprove Goldbach's conjecture.  But we will try to learn a bit of Haskell and see what interesting patterns we can find for as large of values of *n* as our computational power will allow.
 
-This project is my implementation of "A Golden Prime Project" from [*Keeping it R.E.A.L.: Research Experiences for All Learners* by Carla D. Martin and Anthony Tongen](http://www.maa.org/publications/ebooks/keeping-it-real-research-experiences-for-all-learners).
+This project is my implementation of "A Golden Prime Project" from [*Keeping it R.E.A.L.: Research Experiences for All Learners*](http://www.maa.org/publications/ebooks/keeping-it-real-research-experiences-for-all-learners) by Carla D. Martin and Anthony Tongen.
 
 Prime Generation
 ----------------
