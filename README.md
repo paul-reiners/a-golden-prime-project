@@ -5,7 +5,7 @@ Goldbach's Conjecture
 ---------------------
 [Goldbach's conjecture](http://en.wikipedia.org/wiki/Goldbach's_conjecture) states that every even integer *n* greater than 2 is the sum of two primes.  It has not been proved, but has been [confirmed by computer for *n* up to 4 × 10^18 by T. Oliveira e Silva](http://en.wikipedia.org/wiki/Goldbach%27s_conjecture#Verified_results).
 
-This project contains computational experiments regarding Goldbach's conjecture.  We're certainly not going to try to replicate  Silva's results.  But we will try to learn a bit of Haskell and see what patterns we can find for as large of values of *n* as our computational power will allow.
+This project contains computational experiments regarding Goldbach's conjecture.  We're certainly not going to try to prove or disprove Goldbach's conjecture.  But we will try to learn a bit of Haskell and see what interesting patterns we can find for as large of values of *n* as our computational power will allow.
 
 Prime Generation
 ----------------
