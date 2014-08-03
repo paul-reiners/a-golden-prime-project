@@ -56,6 +56,8 @@ There is an obvious linear time implementation:
         
     primePairs :: Integer -> [(Integer, Integer)]
     primePairs n = primePairsHelper n (takeWhile (< n) primes)
+    
+These functions can be found in [AGPP.hs](https://github.com/paul-reiners/a-golden-prime-project/blob/master/src/AGPP.hs). 
 
 However, the speed-up is disappointing:
 
@@ -80,3 +82,12 @@ For small *n*, the speed-up is dramatic.  But it's not small *n* that I'm worrie
     primePairs:  O(n) * O(n log log n)   = O(n^2 log log n)
     
 So what is going on here?  primePairs should be a lot faster than primePairs'.  My best guess is that for large *n*, the Sieve of Erastothenes table is taking up a lot of memory, and, hence, there is a possibly a lot of memory swapping out to disk.  This is causing the time of the calls to primes to dominate the computation time.  That's my guess at any rate.  It would be interesting to compare these relative times on computers with different amounts of RAM or to monitor at which values of *n* virtual memory starts being used.
+
+Number of pairs of primes that sum to a particular even number
+--------------------------------------------------------------
+
+We next examine the number of pairs of primes that sum to a particular even number.  Recall that, if Goldbach's conjecture is true, this will always be at least 1 (for *n > 2*).  The code for generating this can be found in [AGPP.hs](https://github.com/paul-reiners/a-golden-prime-project/blob/master/src/AGPP.hs) and [PrintPairCounts.hs](https://github.com/paul-reiners/a-golden-prime-project/blob/master/src/PrintPairCounts.hs).
+
+We plot the results.  We'll look at these plots at various levels of resolution.
+
+![Prime pair count up to 1000](https://raw.githubusercontent.com/paul-reiners/a-golden-prime-project/master/plots/PrimePairCounts1000.png "Prime pair count up to 1000")
