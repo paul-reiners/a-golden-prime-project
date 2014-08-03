@@ -10,7 +10,7 @@ This project contains computational experiments regarding Goldbach's conjecture.
 
 Prime Generation
 ----------------
-Rather than write the prime generation code in Haskell myself, I decided to concentrate on code related to Goldbach's conjecture in this project.  I've used the Sieve of Erastothenes implementation in Haskell given in *The Haskell Road to Logic, Maths and Programming*[http://homepages.cwi.nl/~jve/HR/#Home] by Kees Doets and Jan van Eijck.
+Rather than write the prime generation code in Haskell myself, I decided to concentrate on code related to Goldbach's conjecture in this project.  I've used the Sieve of Erastothenes implementation in Haskell given in [*The Haskell Road to Logic, Maths and Programming*](http://homepages.cwi.nl/~jve/HR/#Home) by Kees Doets and Jan van Eijck.
 
 I've written prime generation code in C in my [a-prime-project](https://github.com/paul-reiners/a-prime-project/blob/master/prime.c).
 
