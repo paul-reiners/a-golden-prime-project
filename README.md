@@ -73,3 +73,10 @@ However, the speed-up is disappointing:
       262,144	                                1,211.950	                         1,168.571
       524,288	                                4,887.736	                         4,806.134
     1,048,576		                                   NA                           22,614.785
+
+For small *n*, the speed-up is dramatic.  But it's not small *n* that I'm worried about as far as performance goes.  Taking into account the *O(n log log n)* running time of the Sieve of Erastothenes primes routine, we get the following running times:
+
+    primePairs': O(n^2) * O(n log log n) = O(n^3 log log n)
+    primePairs:  O(n) * O(n log log n)   = O(n^2 log log n)
+    
+So what is going on here?  primePairs should be a lot faster than primePairs'.  My best guess is that for large *n*, the Sieve of Erastothenes table is taking up a lot of memory, and, hence, there is a possibly a lot of memory swapping out to disk.  This is causing the time of the calls to primes to dominate the computation time.  That's my guess at any rate.  It would be interesting to compare these relative times on computers with different amounts of RAM or to monitor at which values of *n* virtual memory starts being used.
