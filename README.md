@@ -91,16 +91,13 @@ Number of pairs of primes that sum to a particular even number
 
 We next examine the number of pairs of primes that sum to a particular even number.  Recall that, if Goldbach's conjecture is true, this will always be at least 1 (for *n > 2*).  The code for generating this can be found in [AGPP.hs](https://github.com/paul-reiners/a-golden-prime-project/blob/master/src/AGPP.hs) and [PrintPairCounts.hs](https://github.com/paul-reiners/a-golden-prime-project/blob/master/src/PrintPairCounts.hs).
 
-We plot the results.  We'll look at these plots at various levels of resolution.  First we'll look at *n* up to 1000.
+We plot the results.  
 
-![Prime pair count up to *n = 1000*](https://raw.githubusercontent.com/paul-reiners/a-golden-prime-project/master/plots/PrimePairCounts1000.png "Prime pair count up to *n = 1000*")
+![Prime pair count up to *n = 10,0000*](https://raw.githubusercontent.com/paul-reiners/a-golden-prime-project/master/plots/PrimePairCounts100000.png "Prime pair count up to *n = 10,000*")
 
 Note that we've added a [LOESS smoothing line](http://en.wikipedia.org/wiki/Local_regression) in blue.  Of course, if this plot were ever to touch the x-axis, then Goldbach's conjecture would not be true.  Of course we also know that this is not going to happen for *n* up to 4 × 10^18 because of Silva's work.
 
-Now there is something interesting in this data that becomes more obvious if we zoom out to *n = 10,000*:
-
-![Prime pair count up to *n = 10,000*](https://raw.githubusercontent.com/paul-reiners/a-golden-prime-project/master/plots/PrimePairCounts10000.png "Prime pair count up to *n = 10,000*")
-
-Note the curve gathered near the LOESS curve, but notice that there is a second gathering of points above this and perhaps a third gathering of points above that!  What the heck is that?!  We can also see that second curve in our first plot.
+Now there is something interesting in this data.
+  Note the curve gathered near the LOESS curve, but notice that there is a second gathering of points above this and perhaps a third gathering of points above that!  What the heck is that?!  We can also see that second curve in our first plot.
 
 **From our plots, it certainly seems reasonable to believe the Goldbach conjecture.**  It's hard to imagine that curve suddenly dropping all the way to the x-axis.  Of course, this doesn't **prove** anything.
