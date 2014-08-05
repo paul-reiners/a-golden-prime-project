@@ -98,6 +98,7 @@ We plot the results.
 Note that we've added a [LOESS smoothing line](http://en.wikipedia.org/wiki/Local_regression) in blue.  Of course, if this plot were ever to touch the x-axis, then Goldbach's conjecture would not be true.  Of course we also know that this is not going to happen for *n* up to 4 × 10^18 because of Silva's work.
 
 Now there is something interesting in this data.
-  Note the curve gathered near the LOESS curve, but notice that there is a second gathering of points above this and perhaps a third gathering of points above that!  What the heck is that?!  We can also see that second curve in our first plot.
+  Note the curve gathered near the LOESS curve, but notice that there is a second gathering of points above this and perhaps a third gathering of 
+  points above that!  What the heck is that?!  
 
 **From our plots, it certainly seems reasonable to believe the Goldbach conjecture.**  It's hard to imagine that curve suddenly dropping all the way to the x-axis.  Of course, this doesn't **prove** anything.
