@@ -15,11 +15,14 @@ nums n = [m | m <- [4..n], even m]
 primePairCounts :: Integer -> [Int]
 primePairCounts n = map primePairCount (nums n)
 
-numsAndPrimePairCounts :: Integer -> [(Integer, Int)]
-numsAndPrimePairCounts n = zip (nums n) (primePairCounts n)
+primeDivisorCounts :: Integer -> [Int]
+primeDivisorCounts n = map primeDivisorCount (nums n)
 
-showTup :: (Show a, Show b) => (a,b) -> String
-showTup (a,b) = (show a) ++ "," ++ (show b)
+numsAndPrimePairCounts :: Integer -> [(Integer, Int, Int)]
+numsAndPrimePairCounts n = zip3 (nums n) (primePairCounts n) (primeDivisorCounts n)
+
+showTup :: (Show a, Show b, Show c) => (a,b,c) -> String
+showTup (a,b,c) = (show a) ++ "," ++ (show b) ++ "," ++ (show c)
 
 main = do
     args <- getArgs

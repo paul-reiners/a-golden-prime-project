@@ -21,3 +21,6 @@ primePairs n = primePairsHelper n (takeWhile (< n) primes)
 
 primePairCount :: Integer -> Int
 primePairCount n = length (primePairs n)
+
+primeDivisorCount :: Integer -> Int
+primeDivisorCount n = length [p | p <- takeWhile (<= n) primes, rem n p == 0]
