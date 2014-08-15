@@ -170,3 +170,17 @@ divisors of each number.
 
 ![plot of chunk
 unnamed-chunk-1](./README_files/figure-markdown_strict/unnamed-chunk-1.png)
+
+Distinct pairs of primes adding to a given even number
+------------------------------------------------------
+
+For even numbers between 4 and 100,000, how many even numbers only have
+one pair of distinct pairs of primes adding to it? How many evens have
+exactly two distinct pairs of primes adding to it? Exactly three? Four?
+Higher?
+
+    table(prime.pair.count$divisors)
+
+    ## 
+    ##     1     2     3     4     5     6 
+    ##    14 11488 23796 12951  1724    25

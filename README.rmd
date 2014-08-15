@@ -120,3 +120,14 @@ plot(
     col=c("red","blue", "green", "yellow", "cyan", "magenta")[prime.pair.count$divisors], 
     main="Number of prime pairs", xlab="n", ylab="number of prime pairs")
 ```
+
+Distinct pairs of primes adding to a given even number
+------------------------------------------------------
+
+For even numbers between 4 and 100,000, how many even numbers only have one pair of
+distinct pairs of primes adding to it?  How many evens have exactly two distinct
+pairs of primes adding to it?  Exactly three?  Four?  Higher?
+
+```{r}
+table(prime.pair.count$divisors)
+```
