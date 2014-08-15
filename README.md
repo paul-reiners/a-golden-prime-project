@@ -157,3 +157,16 @@ What the heck is that?!
 **From our plots, it certainly seems reasonable to believe the Goldbach
 conjecture.** It's hard to imagine that curve suddenly dropping all the
 way to the x-axis. Of course, this doesn't **prove** anything.
+
+What's interesting is to color these points using the number of prime
+divisors of each number.
+
+    prime.pair.count <- read.csv("./data/triples100000.csv")
+    colnames(prime.pair.count) <- c("n", "count", "divisors")
+    plot(
+        prime.pair.count$n, prime.pair.count$count, 
+        col=c("red","blue", "green", "yellow", "cyan", "magenta")[prime.pair.count$divisors], 
+        main="Number of prime pairs", xlab="n", ylab="number of prime pairs")
+
+![plot of chunk
+unnamed-chunk-1](./README_files/figure-markdown_strict/unnamed-chunk-1.png)
