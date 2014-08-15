@@ -24,3 +24,10 @@ primePairCount n = length (primePairs n)
 
 primeDivisorCount :: Integer -> Int
 primeDivisorCount n = length [p | p <- takeWhile (<= n) primes, rem n p == 0]
+
+weakGoldbachTriples :: Integer -> [(Integer, Integer, Integer)]
+weakGoldbachTriples n = 
+	[(p, q, r) | 
+		p <- takeWhile (< n) primes, q <- takeWhile (< n) primes, 
+		r <- takeWhile (< n) primes, p <= q, q <= r, odd p, odd q, odd r, 
+		p + q + r == n]
