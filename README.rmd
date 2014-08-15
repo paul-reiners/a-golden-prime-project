@@ -130,4 +130,7 @@ pairs of primes adding to it?  Exactly three?  Four?  Higher?
 
 ```{r}
 table(prime.pair.count$divisors)
+hist(
+    prime.pair.count$divisors, main="Number of pairs for n < 100,000", 
+    xlab="Number of pairs")
 ```

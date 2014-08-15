@@ -184,3 +184,10 @@ Higher?
     ## 
     ##     1     2     3     4     5     6 
     ##    14 11488 23796 12951  1724    25
+
+    hist(
+        prime.pair.count$divisors, main="Number of pairs for n < 100,000", 
+        xlab="Number of pairs")
+
+![plot of chunk
+unnamed-chunk-2](./README_files/figure-markdown_strict/unnamed-chunk-2.png)
