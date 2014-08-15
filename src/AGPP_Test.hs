@@ -3,7 +3,7 @@
 
 module AGPP_Test where
 
-import AGPP( primePairs, primePairCount, weakGoldbachTriples )
+import AGPP( primePairs, primePairCount, weakGoldbachTriples, weakGoldbachTripleCount )
 import Test.HUnit
 
 testPrimePairs26 = TestCase $ assertEqual
@@ -20,8 +20,12 @@ testPrimePairCount100 = TestCase $ assertEqual
 
 testWeakGoldbachTriples = TestCase $ assertEqual
 	"weakGoldbachTriples failed" [(3,5,13),(3,7,11),(5,5,11),(7,7,7)] ( weakGoldbachTriples 21 )
+
+testWeakGoldbachTripleCount = TestCase $ assertEqual
+	"weakGoldbachTripleCount failed" 4 ( weakGoldbachTripleCount 21 )
 	
 main = runTestTT $ 
 	TestList [
 		testPrimePairs26, testPrimePairs100, testPrimePairCount26, 
-		testPrimePairCount100, testWeakGoldbachTriples]
+		testPrimePairCount100, testWeakGoldbachTriples, 
+		testWeakGoldbachTripleCount]

@@ -31,3 +31,6 @@ weakGoldbachTriples n =
 		p <- takeWhile (< n) primes, q <- takeWhile (< n) primes, 
 		r <- takeWhile (< n) primes, p <= q, q <= r, odd p, odd q, odd r, 
 		p + q + r == n]
+
+weakGoldbachTripleCount :: Integer -> Int
+weakGoldbachTripleCount n = length (weakGoldbachTriples n)
